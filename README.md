@@ -45,6 +45,14 @@ Manual Execution Example (Text Export):
 ```
 java -jar target/pdfbox-tools-4.0.0-SNAPSHOT-shaded.jar export:text --input sample.pdf --output output.txt
 ```
+Manual Execution Example (File Encrypt):
+```
+java -jar target/pdfbox-tools-4.0.0-SNAPSHOT-shaded.jar encrypt --input sample.pdf --output encrypted-sample.pdf --password 123
+```
+Manual Execution Example (Images Export):
+```
+java -jar target/pdfbox-tools-4.0.0-SNAPSHOT-shaded.jar export:images --input test.pdf
+```
 Automated Execution (100 Iterations): The project includes a Java script to execute the commands 100 times. Run the following command:
 ```
 java -cp target/pdfbox-tools-4.0.0-SNAPSHOT-shaded.jar automation.PDFBoxRunner
