@@ -17,6 +17,9 @@
  ! limitations under the License.
  !-->
 
+<!-- ========== Ali Maher ==========
+ ! this file is added by Ali Maher >>> -->
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
@@ -110,15 +113,14 @@
       </resource>
     </resources>
     <plugins>
-        <!-- AspectJ Maven Plugin for weaving -->
         <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>aspectj-maven-plugin</artifactId>
-            <version>1.14.0</version> <!-- Latest version -->
+            <version>1.14.0</version>
             <configuration>
-                <complianceLevel>16</complianceLevel> <!-- Set to Java 16 -->
-                <source>16</source>                   <!-- Set to Java 16 -->
-                <target>16</target>                   <!-- Set to Java 16 -->
+                <complianceLevel>16</complianceLevel>
+                <source>16</source>
+                <target>16</target>
                 <aspectLibraries>
                     <aspectLibrary>
                         <groupId>org.aspectj</groupId>

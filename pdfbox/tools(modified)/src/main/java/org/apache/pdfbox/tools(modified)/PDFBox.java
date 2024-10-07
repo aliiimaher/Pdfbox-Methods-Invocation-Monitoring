@@ -28,6 +28,9 @@ import picocli.CommandLine.Spec;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+// ========== Ali Maher ==========
+// this file is modified by Ali Maher >>>
+
 /**
  * Simple wrapper around all the command line utilities included in PDFBox.
  * Used as the main class in the runnable standalone PDFBox jar.
