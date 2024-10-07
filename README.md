@@ -1,6 +1,3 @@
-# Pdfbox-Methods-Invocation-Monitoring
-This repository belongs to Apache Pdfbox Methods Invocation Monitoring.
-
 # **PDFBox Method Invocation and System Monitoring**
 
 This project presents a case study of monitoring method invocations and system properties (such as CPU and memory usage) during executing various **Apache PDFBox** commands. The study is based on tasks outlined in the **RICK paper**, which analyzes runtime behavior and third-party library dependencies.
@@ -9,18 +6,10 @@ The project uses **AspectJ** for method invocation tracking and **Java Managemen
 
 ---
 
-## **Features**
-
-- **Method Invocation Monitoring**: Track method calls from both internal PDFBox functions and third-party libraries using **AspectJ**.
-- **System Properties Monitoring**: Monitor system properties such as **CPU usage** and **memory consumption** during command execution, with real-time graph visualization using **JFreeChart**.
-- **Automated Command Execution**: Execute PDFBox commands **100 times** to gather performance data under repeated workloads.
-
----
-
 ## **PDFBox Commands Covered**
 1. **`export:text`**: Extracts text from PDF documents.
 2. **`encrypt`**: Encrypts PDF documents with a password.
-3. **`export:image`**: Extracts images from PDF documents.
+3. **`export:images`**: Extracts images from PDF documents.
 
 Each of these commands has been executed repeatedly to measure their impact on system performance and to monitor method invocations.
 
