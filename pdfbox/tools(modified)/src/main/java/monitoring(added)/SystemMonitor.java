@@ -13,7 +13,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 // ========== Ali Maher ==========
-// this file is modified by Ali Maher >>>
+// this file is created by Ali Maher >>>
 
 public class SystemMonitor {
 
