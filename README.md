@@ -47,7 +47,7 @@ java -jar target/pdfbox-tools-4.0.0-SNAPSHOT-shaded.jar export:text --input samp
 ```
 Manual Execution Example (File Encrypt):
 ```
-java -jar target/pdfbox-tools-4.0.0-SNAPSHOT-shaded.jar encrypt --input sample.pdf --output encrypted-sample.pdf --password 123
+java -jar target/pdfbox-tools-4.0.0-SNAPSHOT-shaded.jar encrypt --input sample.pdf --output encrypted-sample.pdf -U=123
 ```
 Manual Execution Example (Images Export):
 ```
