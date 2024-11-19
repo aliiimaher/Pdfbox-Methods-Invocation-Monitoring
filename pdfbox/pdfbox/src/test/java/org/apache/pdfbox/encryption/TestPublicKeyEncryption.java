@@ -42,10 +42,7 @@ import org.apache.pdfbox.pdmodel.encryption.AccessPermission;
 import org.apache.pdfbox.pdmodel.encryption.PublicKeyProtectionPolicy;
 import org.apache.pdfbox.pdmodel.encryption.PublicKeyRecipient;
 import org.apache.pdfbox.text.PDFTextStripper;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
@@ -56,8 +53,25 @@ import org.junit.jupiter.params.provider.MethodSource;
  *
  * @author Ben Litchfield
  */
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class TestPublicKeyEncryption
 {
+
+    @Test
+    @Order(1)
+    void i_modified_this_file() {
+        System.out.println("aliiiimaher");
+    }
+
+    static int number_of_method_invocations = 0;
+
+    // to run it as the last test
+    @Test
+    @Order(20)
+    void printCountOfMethodInvocations1() {
+        System.out.println("number_of_method_invocations1: " + number_of_method_invocations);
+    }
+
     private static final File TESTRESULTSDIR = new File("target/test-output/crypto");
 
     private AccessPermission permission1;
@@ -161,6 +175,7 @@ class TestPublicKeyEncryption
      */
     @ParameterizedTest
     @MethodSource("keyLengths")
+    @Order(9)
     void testProtectionError(int keyLength) throws Exception
     {
         PublicKeyProtectionPolicy policy = new PublicKeyProtectionPolicy();
@@ -199,6 +214,7 @@ class TestPublicKeyEncryption
      */
     @ParameterizedTest
     @MethodSource("keyLengths")
+    @Order(10)
     void testProtection(int keyLength) throws Exception
     {
         PublicKeyProtectionPolicy policy = new PublicKeyProtectionPolicy();
@@ -231,6 +247,7 @@ class TestPublicKeyEncryption
      */
     @ParameterizedTest
     @MethodSource("keyLengths")
+    @Order(8)
     void testMultipleRecipients(int keyLength) throws Exception
     {
         PublicKeyProtectionPolicy policy = new PublicKeyProtectionPolicy();
@@ -332,6 +349,7 @@ class TestPublicKeyEncryption
      * @throws IOException
      */
     @Test
+    @Order(2)
     void testReadPubkeyEncryptedAES128() throws IOException
     {
         try (PDDocument doc = Loader.loadPDF(
@@ -356,6 +374,7 @@ class TestPublicKeyEncryption
      * @throws IOException
      */
     @Test
+    @Order(3)
     void testReadPubkeyEncryptedAES256() throws IOException
     {
         try (PDDocument doc = Loader.loadPDF(
@@ -380,6 +399,7 @@ class TestPublicKeyEncryption
      * @throws IOException
      */
     @Test
+    @Order(4)
     void testReadPubkeyEncryptedAES128withMetadataExposed() throws IOException
     {
         try (PDDocument doc = Loader.loadPDF(
@@ -404,6 +424,7 @@ class TestPublicKeyEncryption
      * @throws IOException
      */
     @Test
+    @Order(5)
     void testReadPubkeyEncryptedAES256withMetadataExposed() throws IOException
     {
         try (PDDocument doc = Loader.loadPDF(

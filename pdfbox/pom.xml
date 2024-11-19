@@ -39,7 +39,7 @@
     <module>xmpbox</module>
     <module>pdfbox</module>
     <module>debugger</module>
-    <module>tools</module>
+    <module>tools(modified)</module>
     <module>app</module>
     <module>debugger-app</module>
     <module>examples</module>
